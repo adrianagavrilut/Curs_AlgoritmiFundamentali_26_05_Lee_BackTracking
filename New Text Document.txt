@@ -1,0 +1,1 @@
+Se dau 5 zaruri. Se cere sa se afiseze toate combinatile care au suma 15.
