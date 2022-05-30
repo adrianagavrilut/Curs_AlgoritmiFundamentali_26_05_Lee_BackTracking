@@ -34,6 +34,7 @@ namespace curs11
             v = new TriData[buff];
             idx = 0;
         }
+
         public void Push(TriData x)
         {
             if (idx == v.Length)
@@ -53,25 +54,31 @@ namespace curs11
                 idx++;
             }
         }
+
         public TriData Pop()
         {
-            TriData tor = v[idx - 1];
+            TriData tor = v[0];
             if ((v.Length - idx) == buff)
             {
                 TriData[] t = new TriData[v.Length - buff + 1];
-                for (int i = 0; i < idx; i++)
+                for (int i = 0; i < idx - 1; i++)
                 {
-                    t[i] = v[i];
+                    t[i] = v[i + 1];
                 }
+                idx--;
                 v = t;
             }
             else
             {
-                v[idx - 1] = new TriData(0, 0, 0);
+                for (int i = 0; i < idx - 1; i++)
+                {
+                    v[i] = v[i + 1];
+                }
+                idx --;
             }
-            idx--;
             return tor;
         }
+
         public string view()
         {
             string t = "";

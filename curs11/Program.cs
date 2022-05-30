@@ -66,6 +66,7 @@ namespace curs11
                         matrix[t.l, t.c - 1] = t.v + 1;
                     }
                 }
+                Console.WriteLine();
                 Console.WriteLine(A.view());
                 ViewMatrix(matrix);
             }
