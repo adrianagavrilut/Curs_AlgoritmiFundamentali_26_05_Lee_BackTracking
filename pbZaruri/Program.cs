@@ -14,14 +14,14 @@ namespace pbZaruri
     {
         static void Main(string[] args)
         {
-            int n = 4; //4 multimi
+            int n = 3; //4 multimi
             int[] s = new int[n]; //vector pt solutie
             bool[] b = new bool[n];
             //int k = 3;
             //int[] sol = new int[k];
             //BK1(0, n, s); //0 e nivelul de la care pornim
-            //BK2(0, n, s);
-            BK3(0, n, s, b);
+            BK2(0, n, s);
+            //BK3(0, n, s, b);
             //BKAranj(0, n, k, sol);
             //BKCombin(0, n, k, sol);
             Console.WriteLine("Done");
